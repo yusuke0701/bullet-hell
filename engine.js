@@ -76,3 +76,10 @@ class EventDispatcher {
         }
     }
 }
+
+// ゲームイベントクラスは、イベントディスパッチャーから発火させるイベント用のクラス
+class GameEvent {
+    constructor(target) {
+        this.target = target;
+    }
+}
