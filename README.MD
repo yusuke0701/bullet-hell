@@ -1,3 +1,15 @@
-下記ブログを写経する
+# 🚀 Welcome to your new awesome project!
 
-https://sbfl.net/blog/2016/05/18/javascript-danmaku-stg-1/
+This project has been created using **webpack scaffold**, you can now run
+
+```
+npm run build
+```
+
+or
+
+```
+yarn build
+```
+
+to bundle your application
