@@ -10,7 +10,7 @@ export class AssetLoader {
         img.src = url;
 
         const promise = new Promise((resolve, reject) =>
-            img.addEventListener('load', (e) => {
+            img.addEventListener('load', e => {
                 this._assets.set(name, img);
                 resolve(img);
             }));
@@ -19,7 +19,7 @@ export class AssetLoader {
     }
 
     loadAll() {
-        return Promise.all(this._promises).then((p) => this._assets);
+        return Promise.all(this._promises).then(p => this._assets);
     }
 
     get(name) {

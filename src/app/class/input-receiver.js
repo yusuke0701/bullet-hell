@@ -4,8 +4,8 @@ export class InputReceiver {
         this._keyMap = new Map();
         this._prevKeyMap = new Map();
 
-        addEventListener('keydown', (ke) => this._keyMap.set(ke.key, true));
-        addEventListener('keyup', (ke) => this._keyMap.set(ke.key, false));
+        addEventListener('keydown', ke => this._keyMap.set(ke.key, true));
+        addEventListener('keyup', ke => this._keyMap.set(ke.key, false));
     }
 
     getInput() {
