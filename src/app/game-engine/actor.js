@@ -1,4 +1,4 @@
-import {EventDispatcher} from './event-dispatcher.js.js';
+import { EventDispatcher } from './event-dispatcher';
 
 // アクタークラスは、ゲームのキャラクターを表す
 export class Actor extends EventDispatcher {
