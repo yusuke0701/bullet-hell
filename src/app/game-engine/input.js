@@ -30,6 +30,6 @@ export class Input {
     getKeyUp(keyName) {
         const prevDown = this._getPrevKey(keyName);
         const currentDown = this.getKey(keyName);
-        return (prevDown && !currentDown)
+        return (prevDown && !currentDown);
     }
 }

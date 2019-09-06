@@ -1,4 +1,5 @@
-import { EventDispatcher } from './event-dispatcher'
+import { EventDispatcher } from './event-dispatcher';
+import { GameEvent } from './game-event';
 
 export class Scene extends EventDispatcher {
     constructor(name, backgroundColor, renderingTarget) {

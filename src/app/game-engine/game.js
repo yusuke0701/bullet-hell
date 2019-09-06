@@ -1,4 +1,6 @@
-import { InputReceiver } from "./input-receiver";
+import { InputReceiver } from './input-receiver';
+import { Rectangle } from './rectangle';
+import { GameInformation } from './game-information';
 
 export class Game {
     constructor(title, width, height, maxFps) {

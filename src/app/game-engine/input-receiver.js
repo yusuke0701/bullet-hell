@@ -1,3 +1,5 @@
+import { Input } from './input';
+
 // インプットレシーバークラスは、キー入力を検知する
 export class InputReceiver {
     constructor() {

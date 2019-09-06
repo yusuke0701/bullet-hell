@@ -1,4 +1,4 @@
-import { Actor } from "./actor";
+import { Actor } from './actor';
 
 export class SpriteActor extends Actor {
     constructor(x, y, sprite, hitArea, tags = []) {
