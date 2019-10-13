@@ -9,21 +9,21 @@ export class Enemy extends SpriteActor {
         const hitArea = new Rectangle(0, 0, 16, 16);
         super(x, y, sprite, hitArea, ['enemy']);
 
-        this.maxHP = 50;
-        this.currentHP = this.maxHP;
+        this.maxHp = 50;
+        this.currentHp = this.maxHp;
 
         // プレイヤーの弾に当たったらHPを減らす
         this.addEventListener('hit', e => {
             if (e.target.hasTag('playerBullet')) {
-                this.currentHP--;
+                this.currentHp--;
                 this.dispatchEvent('changehp', new GameEvent(this));
             }
         });
     }
 
     update(gameInfo, input) {
-        // HPがゼロになったらdestoryする
-        if (this.currentHP <= 0) {
+        // HPがゼロになったらdestroyする
+        if (this.currentHp <= 0) {
             this.destroy();
         }
     }
