@@ -16,6 +16,13 @@ export class Fighter extends SpriteActor {
     this._speed = 3;
     this._velocityX = 0;
     this._velocityY = 0;
+
+    // 敵の弾に当たったらdestroyする
+    this.addEventListener('hit', e => {
+      if (e.target.hasTag('enemyBullet')) {
+        this.destroy();
+      }
+    });
   }
 
   update(gameInfo, input) {
