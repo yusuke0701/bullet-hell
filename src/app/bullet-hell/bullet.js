@@ -9,11 +9,16 @@ export class Bullet extends SpriteActor {
     const hitArea = new Rectangle(4, 0, 8, 16);
     super(x, y, sprite, hitArea, ['playerBullet']);
 
-    this.speed = 6;
+    this._speed = 6;
+
+    // 敵に当たったら消える
+    this.addEventListener('hit', (e) => {
+      if (e.target.hasTag('enemy')) { this.destroy(); }
+    });
   }
 
   update(gameInfo, input) {
-    this.y -= this.speed;
+    this.y -= this._speed;
     if (this.isOutOfBounds(gameInfo.screenRectangle)) {
       this.destroy();
     }
