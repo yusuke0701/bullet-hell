@@ -1,4 +1,4 @@
-import { Sprite, SpriteActor, assets, Rectangle } from "../game-engine";
+import { Sprite, SpriteActor, assets, Rectangle } from '../game-engine';
 
 export class EnemyBullet extends SpriteActor {
     constructor(x, y, velocityX, velocityY) {

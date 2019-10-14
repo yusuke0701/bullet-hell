@@ -1,4 +1,4 @@
-import { Actor, Rectangle } from "../game-engine";
+import { Actor, Rectangle } from '../game-engine';
 
 export class EnemyHpBar extends Actor {
     constructor(x, y, enemy) {

@@ -1,5 +1,5 @@
-import { Scene } from "../game-engine";
-import { TextLabel } from "./text-label";
+import { Scene } from '../game-engine';
+import { TextLabel } from './text-label';
 
 export class DanmakuStgEndScene extends Scene {
     constructor(renderingTarget) {
