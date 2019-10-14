@@ -22,15 +22,27 @@ jobs:
     - name: ESLintを実行
       run: npm run lint
 
-  build:
+  build-deploy:
 
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v1
     - name: バージョン
       run: npm -v
     - name: 依存関係の解決
       run: npm install
-    - name: ビルド
+    - name: bullet-hellのビルド
       run: npm run build
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2.2.0
+      with:
+        hugo-version: '0.58.3'
+    - name: Hugoのビルド
+      run: hugo --gc --minify --cleanDestinationDir
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.4.0
+      env:
+        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./dist

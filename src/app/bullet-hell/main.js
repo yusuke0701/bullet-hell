@@ -1,5 +1,6 @@
 import { Game, assets } from './../game-engine';
 import { DanmakuStgTitleScene } from './title-scene';
+import spriteImageData from './../../assets/sprite.png';
 
 class DanamkuStgGame extends Game {
   constructor() {
@@ -10,8 +11,7 @@ class DanamkuStgGame extends Game {
 }
 
 export const gameStart = function() {
-  // 画像はバンドルしてないので、distからの相対パスを入れる
-  assets.addImage('sprite', './../assets/sprite.png');
+  assets.addImage('sprite', spriteImageData);
   assets.loadAll().then(() => {
     const game = new DanamkuStgGame();
     document.body.appendChild(game.screenCanvas);
